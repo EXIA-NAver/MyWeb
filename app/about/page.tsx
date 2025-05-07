@@ -33,28 +33,16 @@ export default function AboutPage() {
               <div className="space-y-2">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl">About Me</h1>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Hello, I'm a passionate developer focused on frontend and full-stack development.
+                  I'm a passionate Full-stack Developer and Software Development Engineer with a strong foundation in computer science and a drive for creating efficient, scalable solutions.
                 </p>
               </div>
               <div className="space-y-4">
                 <p>
-                  I have several years of software development experience, particularly in web development. I love
-                  learning new technologies and applying them to real-world projects. I believe in the power of
-                  technology to change the world, so I'm constantly working to improve my skills to create better
-                  products.
+                  As a Computer Science student at Texas Tech University, I combine academic knowledge with practical development experience. I specialize in building robust web applications and services, with expertise in both frontend and backend technologies. My approach to software development emphasizes clean code, system design principles, and performance optimization.
                 </p>
                 <p>
-                  On this blog, I share my learning notes, technical insights, and project experiences. I hope these
-                  resources are helpful to you, and I welcome discussions on technology-related topics.
+                  I'm particularly interested in distributed systems, cloud architecture, and building scalable applications. Through this blog, I share my technical insights, development experiences, and solutions to complex engineering challenges. I'm always eager to learn new technologies and best practices in software development.
                 </p>
-              </div>
-              <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                <Link href="https://github.com/EXIA-NAver" target="_blank" rel="noreferrer">
-                  <Button>GitHub Profile</Button>
-                </Link>
-                <Link href="mailto:opzhi6@gmail.com">
-                  <Button variant="outline">Contact Me</Button>
-                </Link>
               </div>
             </div>
           </div>
@@ -72,16 +60,50 @@ export default function AboutPage() {
                 <Card>
                   <CardContent className="p-6">
                     <div className="space-y-4">
+                      <h3 className="text-xl font-bold">Programming Languages</h3>
+                      <div className="flex flex-wrap gap-2">
+                        <Badge>C/C++</Badge>
+                        <Badge>Java</Badge>
+                        <Badge>Python</Badge>
+                        <Badge>Kotlin</Badge>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+                <Card>
+                  <CardContent className="p-6">
+                    <div className="space-y-4">
+                      <h3 className="text-xl font-bold">Frameworks</h3>
+                      <div className="flex flex-wrap gap-2">
+                        <Badge>Spring Cloud</Badge>
+                        <Badge>ReactJS</Badge>
+                        <Badge>TensorFlow</Badge>
+                        <Badge>Lambda</Badge>
+                        <Badge>Flask</Badge>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+                <Card>
+                  <CardContent className="p-6">
+                    <div className="space-y-4">
+                      <h3 className="text-xl font-bold">Database</h3>
+                      <div className="flex flex-wrap gap-2">
+                        <Badge>MySQL</Badge>
+                        <Badge>MongoDB</Badge>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+                <Card>
+                  <CardContent className="p-6">
+                    <div className="space-y-4">
                       <h3 className="text-xl font-bold">Frontend Development</h3>
                       <div className="flex flex-wrap gap-2">
                         <Badge>HTML</Badge>
                         <Badge>CSS</Badge>
                         <Badge>JavaScript</Badge>
-                        <Badge>TypeScript</Badge>
                         <Badge>React</Badge>
-                        <Badge>Next.js</Badge>
-                        <Badge>Vue</Badge>
-                        <Badge>Tailwind CSS</Badge>
                       </div>
                     </div>
                   </CardContent>
@@ -92,27 +114,8 @@ export default function AboutPage() {
                       <h3 className="text-xl font-bold">Backend Development</h3>
                       <div className="flex flex-wrap gap-2">
                         <Badge>Node.js</Badge>
-                        <Badge>Express</Badge>
-                        <Badge>NestJS</Badge>
                         <Badge>Python</Badge>
-                        <Badge>Django</Badge>
-                        <Badge>RESTful API</Badge>
-                        <Badge>GraphQL</Badge>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-                <Card>
-                  <CardContent className="p-6">
-                    <div className="space-y-4">
-                      <h3 className="text-xl font-bold">Databases</h3>
-                      <div className="flex flex-wrap gap-2">
-                        <Badge>MySQL</Badge>
-                        <Badge>PostgreSQL</Badge>
-                        <Badge>MongoDB</Badge>
-                        <Badge>Redis</Badge>
-                        <Badge>Prisma</Badge>
-                        <Badge>Sequelize</Badge>
+                        <Badge>Express</Badge>
                       </div>
                     </div>
                   </CardContent>
@@ -127,37 +130,6 @@ export default function AboutPage() {
                         <Badge>Docker</Badge>
                         <Badge>CI/CD</Badge>
                         <Badge>AWS</Badge>
-                        <Badge>Vercel</Badge>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-                <Card>
-                  <CardContent className="p-6">
-                    <div className="space-y-4">
-                      <h3 className="text-xl font-bold">Testing</h3>
-                      <div className="flex flex-wrap gap-2">
-                        <Badge>Jest</Badge>
-                        <Badge>React Testing Library</Badge>
-                        <Badge>Cypress</Badge>
-                        <Badge>Playwright</Badge>
-                        <Badge>单元测试</Badge>
-                        <Badge>集成测试</Badge>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-                <Card>
-                  <CardContent className="p-6">
-                    <div className="space-y-4">
-                      <h3 className="text-xl font-bold">Other</h3>
-                      <div className="flex flex-wrap gap-2">
-                        <Badge>UI/UX设计</Badge>
-                        <Badge>Figma</Badge>
-                        <Badge>响应式设计</Badge>
-                        <Badge>SEO</Badge>
-                        <Badge>性能优化</Badge>
-                        <Badge>无障碍设计</Badge>
                       </div>
                     </div>
                   </CardContent>
@@ -180,26 +152,12 @@ export default function AboutPage() {
                   <CardContent className="p-6">
                     <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                       <div className="space-y-1">
-                        <h3 className="text-xl font-bold">Computer Science and Technology</h3>
-                        <p className="text-muted-foreground">Well-known University</p>
+                        <h3 className="text-xl font-bold">Computer Science</h3>
+                        <p className="text-muted-foreground">Texas Tech University</p>
                       </div>
                       <div className="text-right">
-                        <p>2018 - 2022</p>
+                        <p>2021 - 2025</p>
                         <Badge variant="outline">Bachelor's Degree</Badge>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-                <Card>
-                  <CardContent className="p-6">
-                    <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-                      <div className="space-y-1">
-                        <h3 className="text-xl font-bold">Web Development Specialization</h3>
-                        <p className="text-muted-foreground">Online Education Platform</p>
-                      </div>
-                      <div className="text-right">
-                        <p>2022</p>
-                        <Badge variant="outline">Certificate</Badge>
                       </div>
                     </div>
                   </CardContent>
