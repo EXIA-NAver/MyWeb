@@ -1,5 +1,4 @@
 import Link from "next/link"
-import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -30,44 +29,32 @@ export default function AboutPage() {
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
-            <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12">
-              <div className="flex flex-col justify-center space-y-4">
-                <div className="space-y-2">
-                  <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl">About Me</h1>
-                  <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                    Hello, I'm a passionate developer focused on frontend and full-stack development.
-                  </p>
-                </div>
-                <div className="space-y-4">
-                  <p>
-                    I have several years of software development experience, particularly in web development. I love
-                    learning new technologies and applying them to real-world projects. I believe in the power of
-                    technology to change the world, so I'm constantly working to improve my skills to create better
-                    products.
-                  </p>
-                  <p>
-                    On this blog, I share my learning notes, technical insights, and project experiences. I hope these
-                    resources are helpful to you, and I welcome discussions on technology-related topics.
-                  </p>
-                </div>
-                <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                  <Link href="https://github.com/yourusername" target="_blank" rel="noreferrer">
-                    <Button>GitHub Profile</Button>
-                  </Link>
-                  <Link href="mailto:your.email@example.com">
-                    <Button variant="outline">Contact Me</Button>
-                  </Link>
-                </div>
+            <div className="flex flex-col justify-center space-y-4">
+              <div className="space-y-2">
+                <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl">About Me</h1>
+                <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  Hello, I'm a passionate developer focused on frontend and full-stack development.
+                </p>
               </div>
-              <div className="flex items-center justify-center">
-                <Image
-                  src="/professional-developer-portrait.png"
-                  alt="个人照片"
-                  width={400}
-                  height={400}
-                  className="rounded-full object-cover"
-                  priority
-                />
+              <div className="space-y-4">
+                <p>
+                  I have several years of software development experience, particularly in web development. I love
+                  learning new technologies and applying them to real-world projects. I believe in the power of
+                  technology to change the world, so I'm constantly working to improve my skills to create better
+                  products.
+                </p>
+                <p>
+                  On this blog, I share my learning notes, technical insights, and project experiences. I hope these
+                  resources are helpful to you, and I welcome discussions on technology-related topics.
+                </p>
+              </div>
+              <div className="flex flex-col gap-2 min-[400px]:flex-row">
+                <Link href="https://github.com/EXIA-NAver" target="_blank" rel="noreferrer">
+                  <Button>GitHub Profile</Button>
+                </Link>
+                <Link href="mailto:opzhi6@gmail.com">
+                  <Button variant="outline">Contact Me</Button>
+                </Link>
               </div>
             </div>
           </div>
@@ -232,7 +219,7 @@ export default function AboutPage() {
               </div>
               <div className="w-full max-w-md space-y-4">
                 <div className="flex items-center justify-center space-x-4">
-                  <Link href="mailto:your.email@example.com" className="flex items-center space-x-2">
+                  <Link href="mailto:opzhi6@gmail.com" className="flex items-center space-x-2">
                     <Button variant="outline">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -249,15 +236,10 @@ export default function AboutPage() {
                         <rect width="20" height="16" x="2" y="4" rx="2" />
                         <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
                       </svg>
-                      Email
+                      opzhi6@gmail.com
                     </Button>
                   </Link>
-                  <Link
-                    href="https://github.com/yourusername"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="flex items-center space-x-2"
-                  >
+                  <Link href="https://github.com/EXIA-NAver" target="_blank" rel="noreferrer" className="flex items-center space-x-2">
                     <Button variant="outline">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
