@@ -2,6 +2,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import RotatingCube from "@/components/RotatingCube"
 
 export default function AboutPage() {
   return (
@@ -43,6 +44,9 @@ export default function AboutPage() {
                 <p>
                   I'm particularly interested in distributed systems, cloud architecture, and building scalable applications. Through this blog, I share my technical insights, development experiences, and solutions to complex engineering challenges. I'm always eager to learn new technologies and best practices in software development.
                 </p>
+              </div>
+              <div className="w-full max-w-3xl mx-auto">
+                <RotatingCube />
               </div>
             </div>
           </div>
