@@ -4,25 +4,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 
-export default function BlogPage() {
-  const categories = [
-    {
-      title: "Academic Notes",
-      description: "Course notes and learning materials from my university studies",
-      path: "/blog/academic"
-    },
-    {
-      title: "LeetCode Solutions",
-      description: "My solutions and explanations for LeetCode problems",
-      path: "/blog/leetcode"
-    },
-    {
-      title: "Technical Learning",
-      description: "Notes and insights from my self-study and technical explorations",
-      path: "/blog/technical"
-    }
-  ]
-
+export default function LeetCodePage() {
   return (
     <div className="flex min-h-screen flex-col">
       <header className="sticky top-0 z-40 w-full border-b bg-background">
@@ -50,24 +32,26 @@ export default function BlogPage() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Blog Categories</h1>
+                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">LeetCode Solutions</h1>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Explore my learning journey through different categories
+                  My solutions and explanations for LeetCode problems
                 </p>
               </div>
-              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 w-full max-w-5xl">
-                {categories.map((category) => (
-                  <Link key={category.path} href={category.path}>
-                    <Card className="h-full hover:bg-muted/50 transition-colors">
-                      <CardContent className="p-6">
-                        <div className="space-y-4">
-                          <h3 className="text-xl font-bold">{category.title}</h3>
-                          <p className="text-muted-foreground">{category.description}</p>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </Link>
-                ))}
+              <div className="w-full max-w-5xl space-y-8">
+                <div className="flex justify-between items-center">
+                  <h2 className="text-2xl font-bold">All Solutions</h2>
+                  <div className="flex gap-2">
+                    <Button variant="outline" size="sm">
+                      Latest
+                    </Button>
+                    <Button variant="ghost" size="sm">
+                      Difficulty
+                    </Button>
+                  </div>
+                </div>
+                <div className="grid gap-8">
+                  {/* Solutions will be added here */}
+                </div>
               </div>
             </div>
           </div>
@@ -90,4 +74,4 @@ export default function BlogPage() {
       </footer>
     </div>
   )
-}
+} 

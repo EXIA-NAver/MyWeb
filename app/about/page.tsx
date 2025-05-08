@@ -1,10 +1,24 @@
+"use client"
+
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import RotatingCube from "@/components/RotatingCube"
+import { useState, useEffect } from "react"
 
 export default function AboutPage() {
+  const [showCopyMessage, setShowCopyMessage] = useState(false);
+
+  const handleCopyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText('opzhi6@gmail.com');
+      setShowCopyMessage(true);
+      setTimeout(() => setShowCopyMessage(false), 2000);
+    } catch (err) {
+      console.error('Failed to copy email:', err);
+    }
+  };
+
   return (
     <div className="flex min-h-screen flex-col">
       <header className="sticky top-0 z-40 w-full border-b bg-background">
@@ -44,9 +58,6 @@ export default function AboutPage() {
                 <p>
                   I'm particularly interested in distributed systems, cloud architecture, and building scalable applications. Through this blog, I share my technical insights, development experiences, and solutions to complex engineering challenges. I'm always eager to learn new technologies and best practices in software development.
                 </p>
-              </div>
-              <div className="w-full max-w-3xl mx-auto">
-                <RotatingCube />
               </div>
             </div>
           </div>
@@ -181,26 +192,29 @@ export default function AboutPage() {
               </div>
               <div className="w-full max-w-md space-y-4">
                 <div className="flex items-center justify-center space-x-4">
-                  <Link href="mailto:opzhi6@gmail.com" className="flex items-center space-x-2">
-                    <Button variant="outline">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="h-4 w-4 mr-2"
-                      >
-                        <rect width="20" height="16" x="2" y="4" rx="2" />
-                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-                      </svg>
-                      opzhi6@gmail.com
-                    </Button>
-                  </Link>
+                  <Button variant="outline" onClick={handleCopyEmail} className="flex items-center space-x-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="h-4 w-4 mr-2"
+                    >
+                      <rect width="20" height="16" x="2" y="4" rx="2" />
+                      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                    </svg>
+                    opzhi6@gmail.com
+                  </Button>
+                  {showCopyMessage && (
+                    <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-4 py-2 rounded-md shadow-lg">
+                      You have copied my email address!
+                    </div>
+                  )}
                   <Link href="https://github.com/EXIA-NAver" target="_blank" rel="noreferrer" className="flex items-center space-x-2">
                     <Button variant="outline">
                       <svg

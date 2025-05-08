@@ -1,11 +1,38 @@
+"use client"
+
 import Link from "next/link"
 import { GitHubLogoIcon } from "@radix-ui/react-icons"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { GithubProjects } from "@/components/github-projects"
 import RotatingCube from "@/components/RotatingCube"
+import { Badge } from "@/components/ui/badge"
 
 export default function Home() {
+  const latestPosts = [
+    {
+      title: "Data Structures and Algorithms",
+      description: "Understanding fundamental data structures and their implementations",
+      category: "Academic Notes",
+      path: "/blog/academic/data-structures",
+      date: "March 15, 2024"
+    },
+    {
+      title: "Two Sum Solution",
+      description: "Efficient solution to the classic Two Sum problem with detailed explanation",
+      category: "LeetCode Solutions",
+      path: "/blog/leetcode/two-sum",
+      date: "March 14, 2024"
+    },
+    {
+      title: "Next.js App Router Deep Dive",
+      description: "Exploring the new features and best practices of Next.js App Router",
+      category: "Technical Learning",
+      path: "/blog/technical/nextjs-app-router",
+      date: "March 13, 2024"
+    }
+  ]
+
   return (
     <div className="flex min-h-screen flex-col">
       <header className="sticky top-0 z-40 w-full border-b bg-background">
@@ -64,68 +91,38 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32">
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-muted/50">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Latest Blog Posts</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Latest Posts</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Check out my recent learning notes and technical articles
+                  Recent updates from all categories
                 </p>
               </div>
               <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 w-full max-w-5xl">
-                <Card>
-                  <CardHeader>
-                    <CardTitle>Understanding React Hooks in Depth</CardTitle>
-                    <CardDescription>October 15, 2023</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <p>Exploring how React Hooks work and how to use them effectively in your projects...</p>
-                  </CardContent>
-                  <CardFooter>
-                    <Link href="/blog/react-hooks">
-                      <Button variant="outline" size="sm">
-                        Read More
-                      </Button>
-                    </Link>
-                  </CardFooter>
-                </Card>
-                <Card>
-                  <CardHeader>
-                    <CardTitle>New Features in Next.js 13</CardTitle>
-                    <CardDescription>September 28, 2023</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <p>Next.js 13 brings revolutionary changes like App Router, Server Components...</p>
-                  </CardContent>
-                  <CardFooter>
-                    <Link href="/blog/nextjs-13">
-                      <Button variant="outline" size="sm">
-                        Read More
-                      </Button>
-                    </Link>
-                  </CardFooter>
-                </Card>
-                <Card>
-                  <CardHeader>
-                    <CardTitle>Advanced TypeScript Types</CardTitle>
-                    <CardDescription>August 10, 2023</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <p>Learn advanced type operations in TypeScript to improve your code's type safety...</p>
-                  </CardContent>
-                  <CardFooter>
-                    <Link href="/blog/typescript-advanced">
-                      <Button variant="outline" size="sm">
-                        Read More
-                      </Button>
-                    </Link>
-                  </CardFooter>
-                </Card>
+                {latestPosts.map((post) => (
+                  <Link key={post.path} href={post.path}>
+                    <Card className="h-full hover:bg-muted/50 transition-colors">
+                      <CardContent className="p-6">
+                        <div className="space-y-4">
+                          <div>
+                            <Badge variant="outline">{post.category}</Badge>
+                            <h3 className="text-xl font-bold mt-2">{post.title}</h3>
+                            <p className="text-sm text-muted-foreground mt-1">{post.date}</p>
+                          </div>
+                          <p className="text-muted-foreground">{post.description}</p>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </Link>
+                ))}
               </div>
-              <Link href="/blog">
-                <Button variant="outline">View All Posts</Button>
-              </Link>
+              <div className="mt-8">
+                <Link href="/blog">
+                  <Button variant="outline">View All Posts</Button>
+                </Link>
+              </div>
             </div>
           </div>
         </section>
