@@ -1,10 +1,9 @@
 import Link from "next/link"
-import Image from "next/image"
 import { GitHubLogoIcon } from "@radix-ui/react-icons"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
 import { GithubProjects } from "@/components/github-projects"
+import RotatingCube from "@/components/RotatingCube"
 
 export default function Home() {
   return (
@@ -59,39 +58,8 @@ export default function Home() {
                   </Link>
                 </div>
               </div>
-              <div className="flex items-center justify-center">
-                <Image
-                  src="/developer-profile.png"
-                  alt="个人照片"
-                  width={400}
-                  height={400}
-                  className="rounded-full object-cover"
-                  priority
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-muted/50">
-          <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">My Skills</h2>
-                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Here are some technologies and tools I'm proficient in
-                </p>
-              </div>
-              <div className="flex flex-wrap justify-center gap-2 py-4">
-                <Badge className="text-sm">JavaScript</Badge>
-                <Badge className="text-sm">TypeScript</Badge>
-                <Badge className="text-sm">React</Badge>
-                <Badge className="text-sm">Next.js</Badge>
-                <Badge className="text-sm">Node.js</Badge>
-                <Badge className="text-sm">HTML/CSS</Badge>
-                <Badge className="text-sm">Tailwind CSS</Badge>
-                <Badge className="text-sm">Git</Badge>
-                <Badge className="text-sm">RESTful API</Badge>
-                <Badge className="text-sm">数据库</Badge>
+              <div className="flex items-center justify-center h-[400px]">
+                <RotatingCube />
               </div>
             </div>
           </div>
