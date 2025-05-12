@@ -11,24 +11,24 @@ import { Badge } from "@/components/ui/badge"
 export default function Home() {
   const latestPosts = [
     {
-      title: "Data Structures and Algorithms",
-      description: "Understanding fundamental data structures and their implementations",
-      category: "Academic Notes",
-      path: "/blog/academic/data-structures",
+      title: "Find the Index of the First Occurrence in a String",
+      description: "Solution and explanation for LeetCode problem 28, including both brute force and KMP algorithm approaches",
+      category: "LeetCode Solutions",
+      path: "/blog/leetcode/find-first-occurrence",
       date: "March 15, 2024"
     },
     {
-      title: "Two Sum Solution",
-      description: "Efficient solution to the classic Two Sum problem with detailed explanation",
-      category: "LeetCode Solutions",
-      path: "/blog/leetcode/two-sum",
+      title: "Search Algorithms",
+      description: "An in-depth exploration of various search algorithms including linear search, binary search, interpolation search, and jump search",
+      category: "Academic Notes",
+      path: "/blog/academic/search-algorithms",
       date: "March 14, 2024"
     },
     {
-      title: "Next.js App Router Deep Dive",
-      description: "Exploring the new features and best practices of Next.js App Router",
+      title: "KMP Algorithm Introduction",
+      description: "A comprehensive guide to understanding the Knuth-Morris-Pratt string matching algorithm",
       category: "Technical Learning",
-      path: "/blog/technical/nextjs-app-router",
+      path: "/blog/technical/kmp-algorithm",
       date: "March 13, 2024"
     }
   ]
@@ -54,7 +54,7 @@ export default function Home() {
             </nav>
           </div>
           <div className="flex flex-1 items-center justify-end space-x-4">
-            <Link href="https://github.com/yourusername" target="_blank" rel="noreferrer">
+            <Link href="https://github.com/EXIA-NAver" target="_blank" rel="noreferrer">
               <div className="inline-flex h-9 w-9 items-center justify-center rounded-md bg-primary text-primary-foreground">
                 <GitHubLogoIcon className="h-5 w-5" />
               </div>
@@ -69,11 +69,10 @@ export default function Home() {
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
                   <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                    Hello, I'm a <span className="text-primary">Developer</span>
+                    Hello, I'm <span className="text-primary">Stephen Gao</span>
                   </h1>
                   <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                    I'm a passionate developer focused on frontend and full-stack development. This blog is where I
-                    share my learning notes and showcase my projects.
+                    This blog is where I share my learning notes and showcase my projects.
                   </p>
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
