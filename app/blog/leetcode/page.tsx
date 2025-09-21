@@ -50,7 +50,27 @@ export default function LeetCodePage() {
                   </div>
                 </div>
                 <div className="grid gap-8">
-                  {/* Solutions will be added here */}
+                  <Card>
+                    <CardContent className="p-6">
+                      <div className="space-y-2">
+                        <h3 className="text-xl font-bold">
+                          <Link href="/blog/leetcode/find-first-occurrence" className="hover:underline">
+                            28. Find the Index of the First Occurrence in a String
+                          </Link>
+                        </h3>
+                        <p className="text-muted-foreground">
+                          Solution and explanation for finding the first occurrence of a string within another string, including both brute force and KMP algorithm approaches
+                        </p>
+                        <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                          <span>Published: March 2024</span>
+                          <span>•</span>
+                          <span>String</span>
+                          <span>•</span>
+                          <span>KMP</span>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
                 </div>
               </div>
             </div>

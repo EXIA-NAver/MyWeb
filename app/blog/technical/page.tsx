@@ -50,7 +50,25 @@ export default function TechnicalPage() {
                   </div>
                 </div>
                 <div className="grid gap-8">
-                  {/* Articles will be added here */}
+                  <Card>
+                    <CardContent className="p-6">
+                      <div className="space-y-2">
+                        <h3 className="text-xl font-bold">
+                          <Link href="/blog/technical/kmp-algorithm" className="hover:underline">
+                            KMP Algorithm Introduction
+                          </Link>
+                        </h3>
+                        <p className="text-muted-foreground">
+                          A comprehensive guide to understanding the Knuth-Morris-Pratt string matching algorithm
+                        </p>
+                        <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                          <span>Published: March 2024</span>
+                          <span>•</span>
+                          <span>Algorithm</span>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
                 </div>
               </div>
             </div>
@@ -60,7 +78,7 @@ export default function TechnicalPage() {
       <footer className="w-full border-t py-6">
         <div className="container flex flex-col items-center justify-center gap-4 md:flex-row md:gap-8">
           <p className="text-center text-sm leading-loose text-muted-foreground">
-            © 2023 Personal Blog. All rights reserved.
+            © 2024 Personal Blog. All rights reserved.
           </p>
           <div className="flex gap-4">
             <Link href="#" className="text-sm text-muted-foreground underline underline-offset-4">

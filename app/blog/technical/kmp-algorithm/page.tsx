@@ -6,39 +6,17 @@ import { Card, CardContent } from "@/components/ui/card"
 
 export default function KMPAlgorithmPage() {
   return (
-    <div className="flex min-h-screen flex-col">
-      <header className="sticky top-0 z-40 w-full border-b bg-background">
-        <div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
-          <div className="flex gap-6 md:gap-10">
-            <Link href="/" className="flex items-center space-x-2">
-              <span className="inline-block font-bold">Personal Blog</span>
-            </Link>
-            <nav className="flex gap-6">
-              <Link href="/" className="flex items-center text-sm font-medium text-muted-foreground">
-                Home
-              </Link>
-              <Link href="/blog" className="flex items-center text-sm font-medium text-foreground">
-                Blog
-              </Link>
-              <Link href="/about" className="flex items-center text-sm font-medium text-muted-foreground">
-                About
-              </Link>
-            </nav>
+    <section className="w-full py-12 md:py-24 lg:py-32">
+      <div className="container px-4 md:px-6">
+        <div className="flex flex-col items-center justify-center space-y-4 text-center">
+          <div className="space-y-2">
+            <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">KMP Algorithm Introduction</h1>
+            <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+              A comprehensive guide to understanding the Knuth-Morris-Pratt string matching algorithm
+            </p>
           </div>
-        </div>
-      </header>
-      <main className="flex-1">
-        <section className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">KMP Algorithm Introduction</h1>
-                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  A comprehensive guide to understanding the Knuth-Morris-Pratt string matching algorithm
-                </p>
-              </div>
-              <div className="w-full max-w-5xl space-y-8">
-                <article className="prose prose-gray max-w-none dark:prose-invert">
+          <div className="w-full max-w-5xl space-y-8">
+            <article className="prose prose-gray max-w-none dark:prose-invert">
                   <h2 className="text-3xl font-bold mb-6 text-center">Introduction</h2>
                   <p className="text-justify">
                     The Knuth-Morris-Pratt (KMP) algorithm is a classic string matching algorithm used to find occurrences of a pattern within a text string.
@@ -199,27 +177,10 @@ export default function KMPAlgorithmPage() {
                     By utilizing the next array to avoid unnecessary comparisons, it achieves linear time complexity,
                     making it much more efficient than the naive approach for large texts and patterns.
                   </p>
-                </article>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-      <footer className="w-full border-t py-6">
-        <div className="container flex flex-col items-center justify-center gap-4 md:flex-row md:gap-8">
-          <p className="text-center text-sm leading-loose text-muted-foreground">
-            © 2024 Personal Blog. All rights reserved.
-          </p>
-          <div className="flex gap-4">
-            <Link href="#" className="text-sm text-muted-foreground underline underline-offset-4">
-              Privacy Policy
-            </Link>
-            <Link href="#" className="text-sm text-muted-foreground underline underline-offset-4">
-              Contact Me
-            </Link>
+            </article>
           </div>
         </div>
-      </footer>
-    </div>
+      </div>
+    </section>
   )
 } 

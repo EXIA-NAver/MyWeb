@@ -50,7 +50,25 @@ export default function AcademicPage() {
                   </div>
                 </div>
                 <div className="grid gap-8">
-                  {/* Notes will be added here */}
+                  <Card>
+                    <CardContent className="p-6">
+                      <div className="space-y-2">
+                        <h3 className="text-xl font-bold">
+                          <Link href="/blog/academic/search-algorithms" className="hover:underline">
+                            Search Algorithms
+                          </Link>
+                        </h3>
+                        <p className="text-muted-foreground">
+                          An in-depth exploration of various search algorithms including linear search, binary search, interpolation search, and jump search
+                        </p>
+                        <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                          <span>Published: March 2024</span>
+                          <span>•</span>
+                          <span>Algorithm</span>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
                 </div>
               </div>
             </div>
