@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Navigation from "@/components/navigation"
 
 export default function BlogLayout({
   children,
@@ -7,26 +8,7 @@ export default function BlogLayout({
 }) {
   return (
     <div className="flex min-h-screen flex-col">
-      <header className="sticky top-0 z-40 w-full border-b bg-background">
-        <div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
-          <div className="flex gap-6 md:gap-10">
-            <Link href="/" className="flex items-center space-x-2">
-              <span className="inline-block font-bold">Stephen Gao's Blog</span>
-            </Link>
-            <nav className="flex gap-6">
-              <Link href="/" className="flex items-center text-sm font-medium text-muted-foreground">
-                Home
-              </Link>
-              <Link href="/blog" className="flex items-center text-sm font-medium text-foreground">
-                Blog
-              </Link>
-              <Link href="/about" className="flex items-center text-sm font-medium text-muted-foreground">
-                About
-              </Link>
-            </nav>
-          </div>
-        </div>
-      </header>
+      <Navigation />
       <main className="flex-1">
         {children}
       </main>
